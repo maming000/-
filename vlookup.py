@@ -1,3 +1,11 @@
+'''
+刚开始学python，没有复用，也很不健壮，但是能基本实现提取数据
+就这样把，不修改了
+借来下做个能修改word格式的
+希望这是一个好的开始
+万事大吉
+'''
+
 #import pandas as pd
 import openpyxl
 from openpyxl import Workbook
