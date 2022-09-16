@@ -48,8 +48,8 @@ table = f.active
 table.title = 'Sheet1'
 
 for k in range(1,len(spam)):
-    table.cell(row=k,column=1).value = spam[k]
-    table.cell(row=k,column=2).value = newsheet[spam[k]]
+    table.cell(row=k+1,column=1).value = spam[k]
+    table.cell(row=k+1,column=2).value = newsheet[spam[k]]
 
 #print(table.cell(row=1,column=1).value)
 f.save('1.xlsx')
