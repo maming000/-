@@ -39,10 +39,21 @@ for i in range(0,len(liebiao)):
         if liebiao[i] == liebiao2[y]:
             spam.append(liebiao[i])
 
-for k in range(0,len(spam)):
-    print(spam[k] )
-    print(newsheet[spam[k]])
+#for k in range(0,len(spam)):
+    #print(spam[k] )
+    #print(newsheet[spam[k]])
 
+f = Workbook()
+table = f.active
+table.title = 'Sheet1'
+
+for k in range(1,len(spam)):
+    table.cell(row=k,column=1).value = spam[k]
+    table.cell(row=k,column=2).value = newsheet[spam[k]]
+
+#print(table.cell(row=1,column=1).value)
+f.save('1.xlsx')
+f.close()
 
 
 
