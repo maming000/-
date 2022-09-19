@@ -52,6 +52,13 @@ for i in range(0,len(liebiao)):
     #print(spam[k] )
     #print(newsheet[spam[k]])
 
+    
+#表2中有的元素，表1中没有
+#print(newsheet2.keys() - newsheet.keys())
+#两个表中都有的元素
+#print(newsheet2.keys() & newsheet.keys())
+
+    
 f = Workbook()
 table = f.active
 table.title = 'Sheet1'
