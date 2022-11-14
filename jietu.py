@@ -48,7 +48,13 @@ def on_mouse(event,x,y,flags,key):
         point1 = (x,y)
         cv2.circle(img2,point1,10,(0,255,0),thickness=2)
         cv2.imshow('image',img2)
-    elif event ==
+    elif event == cv2.EVENT_MOUSEMOVE and (flags & cv2.EVENT_FLAG_LBUTTON):
+        cv2.rectangle(img2,point1,(x,y),(255,0,0),thickness=2)
+        cv2.imshow('image',img2)
+    elif event == cv2.EVENT_LBUTTONUP:
+        point2 =(x,y)
+        cv2.rectangle(img2,point1,point2,(0,0,255),thickness=2)
+        cv2.imshow('image',img2)
 root = tk.Tk()
 root.title('截图')
 root.config(background='darkslategrey')
